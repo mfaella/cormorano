@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Centered Image</title>
+	<style>
+		body {
+			background-color: #181515;
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			color: #f9b417;
+			font-family: arial;			
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			margin-top: 10%;
+			width: 700px;
+		}
+		#comingsoon {
+		    font-size: xx-large;
+		}
+		.container {
+		    width: calc(100% - 3em);
+			display: flex;
+	        justify-content: space-between;			
+		}
+		.left {
+			width: 40%;
+			text-align: left;
+			padding-bottom: 2em;
+		}
+		.right {
+			width: 40%;
+			text-align: right;
+			padding-bottom: 2em;
+		}
+		a#mail { color: #f9b417; }
+		a#mail:hover { color: #3297a8; }
+		a#map {	color: #f9b417; }
+		a#map:hover { color: #3297a8; }
+		</style>
+</head>
+<body>
+	<img src="img/logo2.png" alt="Logo de Il Cormorano">
+	<span id="comingsoon">Coming soon...</span>
+	<div class="container">
+       <div class="left"><a id="map" href="https://maps.app.goo.gl/SRfyzYR81ENWQH8f8">Viale dei Colli Aminei, 475<br />80131 Napoli</a></div>
+       <div class="right"><!--tel. xxx xxxxxx<br />-->
+	   <a id="mail" href="mailto:info@cormoranoteatro.it">info@cormoranoteatro.it</a></div>
+    </div>
+	
+</body>
+</html>
