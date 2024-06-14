@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Centered Image</title>
+	<title>Il Cormorano</title>
 	<link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet'>
 	<style>
 		body {
@@ -19,7 +19,7 @@
 		a {
 			text-decoration: none;
 		}
-		img {
+		img#logo {
 			max-width: 100%;
 			max-height: 100%;
 			margin-top: 10%;
@@ -52,6 +52,8 @@
 		a#mail:hover { color: #3297a8; }
 		a#map {	color: #f9b417; }
 		a#map:hover { color: #3297a8; }
+		a#tel {	color: #f9b417; }
+		a#tel:hover { color: #3297a8; }
 
 	form {
             display: flex;
@@ -59,6 +61,11 @@
         }
 	form input {
 	    margin: 5px;
+	}
+	img#whatsapp {
+	    width: 25px;
+	    vertical-align: text-top;
+	    margin-left: 0px;
 	}
 	
 	/* @media only screen 
@@ -74,37 +81,28 @@
 
             var formData = new FormData(event.target);
 
-	    console.log('ciao')
-	    
             fetch(event.target.action, {
                 method: 'POST',
+	        mode: "no-cors",
                 body: formData
-            })
-            .then(response => {
-                // Ignore the response
-
-                // Replace the form with the confirmation message
-                var formContainer = document.getElementById('formContainer');
-                var confirmationMessage = document.getElementById('confirmationMessage');
-
-                formContainer.style.display = 'none';
-                confirmationMessage.style.display = 'block';
             })
             .catch(error => {
                 console.error('Errore di invio:', error);
-		var formContainer = document.getElementById('formContainer');
-                var confirmationMessage = document.getElementById('confirmationMessage');
-
-                formContainer.style.display = 'none';
-                confirmationMessage.style.display = 'block';
             });
 
+	    // Replace the form with the confirmation message
+            var formContainer = document.getElementById('formContainer');
+            var confirmationMessage = document.getElementById('confirmationMessage');
+
+            formContainer.style.display = 'none';
+            confirmationMessage.style.display = 'block';
+	    
             return false; // Prevent the default form submission
         }
     </script>
 </head>
 <body>
-	<img src="img/logo2.png" alt="Logo de Il Cormorano">
+	<img id="logo" src="img/logo2.png" alt="Logo de Il Cormorano">
 	<span id="comingsoon">Coming soon...</span>
 
 	<div id="formContainer">
@@ -122,7 +120,8 @@
 	
 	<div class="container">
        <div class="left"><a id="map" href="https://maps.app.goo.gl/SRfyzYR81ENWQH8f8">Viale dei Colli Aminei, 475<br />80131 Napoli</a></div>
-       <div class="right"><!--tel. xxx xxxxxx<br />-->
+       <div class="right"><a id="tel" href="tel:+393792932489">tel. 379 293 2489</a>
+	 <a href="https://wa.me/00393792932489"><img id="whatsapp" src="img/whatsapp2.webp"></a><br />
 	   <a id="mail" href="mailto:info@cormoranoteatro.it">info@cormoranoteatro.it</a></div>
     </div>
 	
