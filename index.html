@@ -4,29 +4,38 @@
 	<title>Il Cormorano</title>
 	<link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet'>
 	<style>
+	  html, body {
+	      width: 100%;
+	      height: 100%;
+	      overflow-x: hidden !important;
+	  }
 		body {
-			background-color: #181515;
-			margin: 0;
-			height: 100vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-			text-align: center;
-			color: #f9b417;
-			font-family: 'Prompt';			
+		    background-color: #181515;
+		    margin: 0;
+		    height: 100vh;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-between;
+		    align-items: center;
+		    text-align: center;
+		    color: #f9b417;
+		    font-family: 'Prompt';			
+		    font-size: 2.5vh;
+		    
 		}
 		a {
-			text-decoration: none;
+		    text-decoration: none;
 		}
 		img#logo {
-			max-width: 100%;
-			max-height: 100%;
-			margin-top: 10%;
-			width: 700px;
+		    display: block;
+		    max-width: 90%;
+		    /*max-height: 100%;*/
+		    margin-top: 10%;
+		    /*width: 700px;*/
 		}
 		#comingsoon {
-			font-size: 5vh;
+		    font-size: 5vh;
 		}
 		.container {
 		    width: calc(100% - 3em);
@@ -34,21 +43,19 @@
 	            justify-content: space-between;
 		}
 		.left {
-			width: 40%;
-			text-align: left;
-			font-size: 2.5vh;
-			padding-bottom: 2em;
+		    width: 49%;
+		    text-align: left;
+		    padding-bottom: 2em;
 		}
 		.right {
-			width: 40%;
-			text-align: right;
-			font-size: 2.5vh;
-			padding-bottom: 2em;
+		    width: 49%;
+		    text-align: right;
+		    padding-bottom: 2em;
 		}
 		#confirmationMessage {
 		    font-size: 2.5vh;
 		}
-		a#mail { color: #f9b417; }
+		a#mail { word-break: break-all; color: #f9b417; }
 		a#mail:hover { color: #3297a8; }
 		a#map {	color: #f9b417; }
 		a#map:hover { color: #3297a8; }
@@ -57,14 +64,17 @@
 
 	form {
             display: flex;
-            align-items: center;
+	    align-items: center;
+	    flex-wrap: wrap;
+	    justify-content: center;
         }
 	form input {
 	    margin: 5px;
+	    font-size: 2.5vh;
 	}
 	img#whatsapp {
-	    width: 25px;
-	    vertical-align: text-top;
+	    height: 3vh;
+	    vertical-align: middle;
 	    margin-left: 0px;
 	}
 	
@@ -108,8 +118,7 @@
 	<div id="formContainer">
 	<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-bKbca3U-JTiwLgV-htzEKfkI9clTxseogAp9mLCrYcfRVQ/formResponse" method="post" onsubmit="return submitForm(event)">
         <label for="email">Lascia l'email per conoscere le nostre iniziative:</label>
-        <input type="email" id="email" name="entry.1261854473" required>
-        <br><br>
+        <input type="email" id="email" autocomplete="email" name="entry.1261854473" required>
         <input type="submit" value="Invia">
 	</form>
 	</div>
