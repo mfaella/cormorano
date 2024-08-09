@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Il Cormorano</title>
+	<link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet'>
+	<style>
+	  html, body {
+	      width: 100%;
+	      height: 100%;
+	      overflow-x: hidden !important;
+	  }
+		body {
+		    background-color: #181515;
+		    margin: 0;
+		    height: 100vh;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-between;
+		    align-items: center;
+		    text-align: center;
+		    color: #f9b417;
+		    font-family: 'Prompt';			
+		    font-size: 2.5vh;
+		    
+		}
+		strong { font-size: 130%; }
+		a {
+		    text-decoration: none;
+		}
+		h1 {
+		    display: inline-block;
+		}
+		img#logo {
+		    display: inline-block;
+		    max-width: 200px;
+		    /*max-height: 100%;*/
+		    margin-right: 20px;
+		    vertical-align: middle;
+		    /*width: 700px;*/
+		}
+		.container {
+		    width: 98%;
+		    display: flex;
+	            justify-content: space-between;
+		}
+		.left {
+		    width: 49%;
+		    text-align: left;
+		    padding-bottom: 2em;
+		}
+		.right {
+		    width: 49%;
+		    text-align: right;
+		    padding-bottom: 2em;
+		}
+		#confirmationMessage {
+		    font-size: 2.5vh;
+		}
+		a#mail { word-break: break-all; color: #f9b417; }
+		a#mail:hover { color: #3297a8; }
+		a#map {	color: #f9b417; }
+		a#map:hover { color: #3297a8; }
+		a#tel {	color: #f9b417; }
+		a#tel:hover { color: #3297a8; }
+
+		ul {
+		    text-align: left;
+		    margin-left: 2%;
+		}
+		
+	img#whatsapp {
+	    height: 3vh;
+	    vertical-align: middle;
+	    margin-left: 0px;
+	}
+	</style>
+</head>
+<body>
+  <div>
+	<a href="index.html"><img id="logo" src="img/logo2.png" alt="Logo de Il Cormorano"></a>
+	<h1>La Struttura</h1>
+  </div>
+  
+	<ul>
+	  <li><strong>Segreteria/sala d'attesa</strong> (condizionata): 22 mq</li>
+	  <li><strong>Sala teatro</strong> (condizionata): 4,30x7,80m (33,5 mq), altezza 2,60m</li>
+	  <ul>
+	    <li>di cui palco: 4,30x2,50m</li>
+	    </ul>
+	  <li><strong>Sala prove</strong>: 3,60x9,15m (33 mq), altezza 2,55m</li>
+	  <li><strong>2 bagni</strong></li>
+	</ul>
+	
+	<div class="container">
+       <div class="left"><a id="map" href="https://maps.app.goo.gl/SRfyzYR81ENWQH8f8">Viale dei Colli Aminei, 475<br />80131 Napoli</a></div>
+       <div class="right"><a id="tel" href="tel:+393792932489">tel. 379 293 2489</a>
+	 <a href="https://wa.me/00393792932489"><img id="whatsapp" src="img/whatsapp.webp"></a><br />
+	   <a id="mail" href="mailto:info@cormoranoteatro.it">info@cormoranoteatro.it</a></div>
+    </div>
+	
+</body>
+</html>
